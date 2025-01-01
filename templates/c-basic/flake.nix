@@ -12,10 +12,14 @@
     pkgs = super.outputs.pkgs.${system}; 
     oldShell = super.outputs.devShells.${system}.default;
   in {
-    devShells.default = pkgs.mkShell rec {
+    devShells.default = pkgs.mkShellNoCC rec {
       name = "C basic devShells";
 
       nativeBuildInputs = oldShell.nativeBuildInputs; # [3]
+
+      packages = with pkgs; [
+        gcc
+      ];
 
       shellHook = ''
         echo -n "Hello, C environment";
