@@ -28,7 +28,7 @@
 
       shellHook = ''
       	# Unset environment variables, required for xmake to find
-				# the linker/compiler that we provide here
+				# the linker/compiler that we provide here [4]
 				unset CC
 				unset CXX
 				unset LD
@@ -46,3 +46,4 @@
 }
 
 # [3]: [original packages has been merge into others](https://github.com/hsjobeki/nixpkgs/blob/96a1ff01e43aee606027916d302f6ad82621806b/pkgs/build-support/mkshell/default.nix#L17-L34)
+# [4]: [unset env var for xmake](https://github.com/tiltedphoques/TiltedEvolution/blob/869d34f95df18458d56fa2eb87a99f70ed93e9cc/flake.nix#L28-L40)
