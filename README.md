@@ -16,3 +16,7 @@ nix flake init [-t/--templates] "github:jackyliu16/flake-templates#<name of temp
 
 > Provide Basic compile chain support of C
 
+3. xmake Templates `#xmake`
+
+> Provide Basic compile chain support of xmake
+
