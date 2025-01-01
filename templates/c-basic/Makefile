@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -g
 
 TARGET = hello
-SOURCE = *.c
+SOURCE = $(wildcard *.c)
 
 #####################
 # Build Instruction #
